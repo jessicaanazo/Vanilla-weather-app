@@ -12,10 +12,13 @@ li {
     margin: 0;
     padding: 0;
     list-style: none;
-    text-transform: capitalize;
+    
     font-size: 16px;
     font-weight: 100;
     line-height: 19px;
+}
+li::first-letter {
+    text-transform: capitalize;
 }
 .weather-app-wrap {
     max-width: 600px;
