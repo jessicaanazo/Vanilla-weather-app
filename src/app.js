@@ -39,10 +39,20 @@ function showTemperature(response) {
     iconElement.setAttribute('src', `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
      iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
-
-let apiKey = '8b7c83c1d2550cda541e73c93abe2c90';
-let city = 'Lagos'
+function search(city) {
+    let apiKey = '8b7c83c1d2550cda541e73c93abe2c90';
  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
  axios.get(apiUrl).then(showTemperature);
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector('#city-input')
+    search(cityInputElement.value)
+}
+
+search('Lagos')
+
+ let form = document.querySelector('#search-form');
+ form.addEventListener('submit', handleSubmit);
