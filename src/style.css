@@ -53,8 +53,8 @@ li::first-letter {
 }
 .weather-temperature img {
     margin-right: 5px;
-    height: 100px;
-    width: 100px;
+    height: 65px;
+    width: 65px;
     
 }
 .weather-temperature strong {
