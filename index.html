@@ -27,10 +27,11 @@
                   class="form-control"
                   id="city-input"
                   autocomplete="off"
+                  autofocus="on"
                 />
               </div>
               <div class="col-2">
-                <input type="submit" value="Search" />
+                <input type="submit" value="Search" class="submit"/>
               </div>
             </div>
           </form>
@@ -41,6 +42,7 @@
               <li id="description"></li>
             </ul>
           </div>
+          <div class="weather-stack">
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
@@ -56,7 +58,7 @@
                 <li>Wind: <span id="wind"></span>m/h</li>
               </ul>
             </div>
-          </div>
+          </div></div>
           <div class="weather-forecast" id="forecast"></div>
         
       </div>
